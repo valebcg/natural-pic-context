@@ -45,10 +45,16 @@ a {
 .info-image{
   margin-top: 4rem;
   color: white;
+
 }
 
 .heart{
   margin-top:6rem;
 }
 
+.info-images{
+  margin-top:13rem;
+  color: white;
+  font-weight: bold;
 
+}

@@ -2,27 +2,34 @@ import React, { useContext } from "react";
 import { Context } from "../Context";
 
 const Favoritos = () => {
+
   const { data } = useContext(Context);
   return (
-    
-    <div className="container-images">
-      <div>
+    <div>
+     
+    <div>
     <h1>Fotos Favoritas</h1>
-    </div>
+      </div> 
+   
+   <div className="container-images">
       {data
         .filter((a) => a.favorite === true)
         .map((item) => (
-         
-            <img
-              className="image-favorite"
+          <div
+              className="image"
               key={item.id}
               src={item.src.tiny}
-              alt={item.alt}
-          />
-          
-        
-          
+              style={{backgroundImage: `url(${item.src.tiny})`,
+            }}
+            >
+
+            <div className="info-images">
+              <p>{item.alt}</p>
+            </div>
+
+          </div>
         ))}
+    </div>
     </div>
   );
 };
